@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>À propos</title>
 </head>
 
 <header>
 <h1>Rayan BENNACEUR</h1>
-    <p>_________________________________________________________________________________________________________________________</p>
+    <p>___________________________________________________________________________________________________________________________________________________________________</p>
     <nav>
-        <ul>
+        <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
-            <li class="sous-nav">
+            <li class="deroul">
                 <a href="a_propos.html">À propos</a>
-                <ul><a href="a_propos.html#a_propos">À propos de moi</a></ul>
-                <ul><a href="a_propos.html#bts">BTS SIO</a></ul>
-                <ul><a href="a_propos.html#certif">Mes certifications</a></ul>
+                <ul class="sous-nav">
+                    <li><a href="a_propos.html#a_propos">À propos de moi</a></li>
+                    <li><a href="a_propos.html#bts">BTS SIO</a></li>
+                    <li><a href="a_propos.html#certif">Mes certifications</a></li>
+                </ul>
             </li>
             <li><a href="projets.html">Mes projets</a></li>
             <li><a href="veille_tech.html">Veille technologique</a></li>
@@ -27,68 +38,105 @@
 </header> 
 
 <body>
-    <h2>À propos de moi</h2>
-    <p>____</p>
-    <h4 id="a_propos">Mon histoire</h4>
-    <p>Je m'appelle Rayan BENNACEUR et je suis âgé de 22 ans. <br> Je suis titulaire d'un baccalauréat générale spécialité Physique-Chimie et SVT et option mathématique, je suis suis actuellement en 2e année de BTS SIO spécialité SLAM (Solutions Logiciels et Applications Métiers).</p>
-    <p>Je suis passionné de nouvelles technologies et je souhaite faire carrière dans ce secteur. <br> Évoluer dans le domaine de l'informatique, étudier en profondeur les différents aspects des métiers de l'informatique, me mettent au service de l'innovation technique qui régit notre monde, sont autant d'arguments qui motivent mon choix.</p>
-    <h4>Mes centres d'intérêts</h4>
-    <img src="images/jv.jpg" title="Quel est votre jeux vidéo préféré ?" width="300" height="250">
-    <p>Jeux vidéo <br> Qui n'aime pas les jeux vidéos ? Nous pouvons être des super-héros, des magiciens des elfes … Et si on veut laisser tomber notre sens de l'éthique, des démons ou des parias de la société… <br>Bref, tout ce dont un homme puisse rêver se trouve dans les jeux vidéo.</p>
-    <img src="images/muscu.jpg" title="Quel sport pratiquez-vous ?" width="300" height="250">
-    <p>Musculation <br> Je m'entraîne depuis 2 ans à la salle de sport. C'est pour moi un bon moyen de me défouler tout en m'entretenant, car rester des heures devant un PC laisse des séquelles à long terme... </p>
-    <img src="images/op.jpg" title="Aimez-vous les mangas ?" width="300" height="250">
-    <p>Manga <br> Les mangas sont pour moi une évasion. Ils me permettent de stimuler ma réflexion et à la fois mon imagination ! <br> One Piece de Eiichiro Oda est mon manga préféré.</p> 
+    <h2><br>À propos de moi</h2>
+    <div class="moi">
+        <p>____</p>
+        <h4 id="a_propos">Mon histoire</h4>
+        <br><p>Je m'appelle Rayan BENNACEUR et je suis âgé de 22 ans. <br> Je suis titulaire d'un baccalauréat général spécialité Physique-Chimie et SVT option mathématique, et je suis suis actuellement en 2e année de BTS SIO spécialité SLAM <em>(Solutions Logiciels et Applications Métiers)</em>.</p>
+        <p>Je suis passionné de nouvelles technologies et je souhaite faire carrière dans ce secteur. <br> Évoluer dans le domaine de l'informatique, étudier en profondeur les différents aspects des métiers de l'informatique, me mettent au service de l'innovation technique qui régit notre monde, sont autant d'arguments qui motivent mon choix.</p>
+    </div>    
+    <h4 class="titre-interet"><br><br>Mes centres d'intérêts <br></h4>
+    <div class="bloc-apropos1">
+        <div class="bloc-apropos2">
+            <img src="images/jv.jpg" title="Quel est votre jeux vidéo préféré ?" width="400" height="350" class="interet">
+            <h3>___________ Jeux vidéos ___________</h3> 
+            <p>Qui n'aime pas les jeux vidéos ? Nous pouvons être des super-héros, des sorciers, des elfes… Et si on veut laisser tomber notre sens de l'éthique, des démons ou des parias de la société… <br>Bref, tout ce dont un homme puisse rêver se trouve dans les jeux vidéos.</p>
+        </div>
+        <div class="bloc-apropos2">
+            <img src="images/muscu.jpg" title="Quel sport pratiquez-vous ?" width="400" height="350" class="interet">
+            <h3>___________ Musculation ___________</h3> 
+            <p>Je m'entraîne depuis 2 ans à la salle de sport. C'est pour moi un bon moyen de me défouler tout en m'entretenant, car rester des heures devant un PC laisse des séquelles à long terme... </p>
+        </div>
+        <div class="bloc-apropos2">
+            <img src="images/op.jpg" title="Aimez-vous les mangas ?" width="400" height="350" class="interet">
+            <h3>___________ Manga ___________</h3> 
+            <p>Les mangas sont pour moi une évasion. Ils me permettent de stimuler ma réflexion et à la fois mon imagination ! <br> One Piece de Eiichiro Oda est mon manga préféré.</p> 
+        </div>
+    </div>
     <h2 id="bts">Qu'est-ce que le BTS SIO ?</h2>
-    <p>____</p>
-    <p>Assez parlé de mes goûts, concentrons-nous dès à présent sur mon parcours</p>
-
-    <p>Le BTS SIO (Services Informatiques aux organisations) est un diplôme national en informatique qui se prépare en deux ans, accessible tant en formation continue qu'en alternance. <br> Cette formation, d'une durée de deux ans, est destiné aux titulaires d'un baccalauréat général, technologique ou professionnel (avec une spécialisation en Systèmes Numériques) et a pour vocation de former des professionnels capables de contribuer activement à la production et à la fourniture de services informatiques aux organisations.​</p>
-    <p>On y distingue 2 spécialités :</p>
-    <p>Option SISR</p>
-    <p>L'option Solutions d'Infrastructure, Systèmes et Réseaux forme des professionnels des réseaux et équipements informatiques (installation, maintenance, sécurité). En sortant d'un BTS SIO option SISR, vous serez capables de gérer et d'administrer le réseau d'une organisations et d'assurer sa sécurité et sa maintenance. L'objectif pédagogique de la formation est de répondre aux attentes des utilisateurs en assurant la disponibilité des services informatiques. <br> En ayant suivi une autre formation après votre BTS SIO Option SISR, ou non, voici quelques métiers auxquels vous pourrez accéder :</p>
-    <ul>
-        <li>​​Technicien Systèmes et Réseaux</li>
-        <li>Informaticien support et déploiement</li>
-        <li>Technicien Réseau/Télécoms</li>
-        <li>Pilote d’exploitation</li>
-        <li>Technicien micro et réseaux</li>
-        <li>Technicien d'infrastructure</li>
-    </ul>
-    <p>Option SLAM</p>
-    <p>L’option Solutions Logicielles et Applications Métiers forme des spécialistes des logiciels (rédaction d’un cahier des charges, formulation des besoins et spécifications, développement, intégration au sein de la société). Elle est destinée aux étudiants qui s'orientent vers les métiers liés à la conception et la maintenance de programmes applicatifs. <br> Voici quelques exemples de métiers que vous pourrez exercer après le BTS SIO option SLAM, avec une formation complémentaire par la suite ou non :</p>
-    <ul>
-        <li>Développeur de sites internet d’applications informatiques</li>
-        <li>Analyste d’applications ou d’études</li>
-        <li>Analyste programmeur</li>
-        <li>Programmeur analyste</li>
-        <li>Programmeur d’applications</li>
-        <li>Responsable des services applicatifs</li>
-        <li>Technicien d’études informatiques</li>
-    </ul>
+    <div class="bloc-bts">
+        <p>____</p>
+        <p>Assez parlé de mes goûts, concentrons-nous dès à présent sur mon parcours</p>
+        <p>Le BTS SIO <em>(Services Informatiques aux Organisations)</em> est un diplôme national en informatique qui se prépare en deux ans, accessible tant en formation continue qu'en alternance. <br> Cette formation, d'une durée de deux ans, est destiné aux titulaires d'un baccalauréat général, technologique ou professionnel <em>(avec une spécialisation en Systèmes Numériques)</em> et a pour vocation de former des professionnels capables de contribuer activement à la production et à la fourniture de services informatiques aux organisations.​</p>
+        <p>On y distingue 2 spécialités :</p>
+    </div>
+    <div class="options">
+        <div class="option">
+            <h3>Option SISR</h3>
+            <br>
+            <p>L'option Solutions d'Infrastructure, Systèmes et Réseaux forme des professionnels des réseaux et équipements informatiques <em>(installation, maintenance, sécurité)</em>. En sortant d'un BTS SIO option SISR, vous serez capables de gérer et d'administrer le réseau d'une organisations et d'assurer sa sécurité et sa maintenance. L'objectif pédagogique de la formation est de répondre aux attentes des utilisateurs en assurant la disponibilité des services informatiques. <br> En ayant suivi une autre formation après votre BTS SIO Option SISR, ou non, voici quelques métiers auxquels vous pourrez accéder :</p>
+            <br><br>
+            <ul>
+                <li>​​Technicien Systèmes et Réseaux</li>
+                <li>Informaticien support et déploiement</li>
+                <li>Technicien Réseau/Télécoms</li>
+                <li>Pilote d’exploitation</li>
+                <li>Technicien micro et réseaux</li>
+                <li>Technicien d'infrastructure</li>
+            </ul>
+        </div>
+        <div class="option">
+            <h3>Option SLAM</h3>
+            <br>
+            <p>L’option Solutions Logiciels et Applications Métiers forme des spécialistes des logiciels <em>(rédaction d’un cahier des charges, formulation des besoins et spécifications, développement, intégration au sein de la société)</em>. Elle est destinée aux étudiants qui s'orientent vers les métiers liés à la conception et la maintenance de programmes applicatifs. <br> Voici quelques exemples de métiers que vous pourrez exercer après le BTS SIO option SLAM, avec une formation complémentaire par la suite ou non :</p>
+            <br><br><br>
+            <ul>
+                <li>Développeur de sites internet d’applications informatiques</li>
+                <li>Analyste d’applications ou d’études</li>
+                <li>Analyste programmeur</li>
+                <li>Programmeur analyste</li>
+                <li>Programmeur d’applications</li>
+                <li>Responsable des services applicatifs</li>
+                <li>Technicien d’études informatiques</li>
+            </ul>
+        </div>
+    </div>
+    <br><br>    
     <h2>Q'est-ce que l'épreuve E5 ?</h2>
-    <p>____</p>
+    <center><p>____</p></center>
     <p>L'épreuve E5 représente une étape importante du BTS SIO. Elle exige la présentation d'au moins deux projets, liés par un contexte commun et en relation avec l'option sélectionnée, à savoir SLAM dans mon cas. Cet examen a pour but d'évaluer l'une des deux situations professionnelles mises en œuvre au cours des deux années de formation. Elle est également accompagnée d'une grille où sont décrites les aptitudes élaborées et appliquées à travers les projets exposés.</p>
     <p>Vous pouvez la voir en détail ici :</p>
     <img src="images\#" alt="">
     <h2 id="certif">Mes compétences</h2>
-    <p>____</p>
+    <center><p>____</p></center>
     <img src="images/html.png" alt="logo" width="100" height="100"> <img src="images/css.png" alt="logo" width="100" height="100"> <img src="images/javascript.png" alt="logo" width="100" height="100"> <img src="images/php.png" alt="logo" width="130"> <img src="images/java.png" alt="logo" width="130">
     <p>HTML</p> <p>CSS</p> <p>Javascript</p> <p>PHP</p> <p>Java</p>
     <h2>Mes certifications</h2>
-    <p>____</p>
+    <center><p>____</p></center>
     <p>bananes</p>
 </body>
 
 <footer>
-    <h3>Mes coordonnées</h3>
-    <p>Follow me</p><br>
-    <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank"><img src="images/linkedin.png" width="40" height="40"></a>
-    <a href="https://github.com/KillBill-jpg"  target="_blank"><img src="images/github.png" width="40" height="40"></a>
-    <p>Email</p><br>
-    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDxqWLWhClMBLCxXZgSwKQQSHLmZZsZzLWNKQWCqTnQdGSWtmxgSKNdFwxmxRRGPnGHjCq" target="_blank">rayanbennaceur.pro@gmail.com</a>
-    <p>Call me</p>
-    <br><p>06 95 72 29 19</p>
-    <p>Copyright 2025 © Rayan BENNACEUR</p>
+    <div class="bloc-footer1">
+        <h3>Mes coordonnées</h3>
+        <div class="bloc-footer2">
+            <div class="follow">
+                <p><strong>Follow me</strong></p>
+                <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank"><img src="images/linkedin.png" width="40" height="40" class="logo-footer"></a>
+                <a href="https://github.com/KillBill-jpg"  target="_blank"><img src="images/github.png" width="40" height="40" class="logo-footer"></a>
+            </div>
+            <div class="mail">
+                <p><strong>Email</strong></p>
+                <br>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDxqWLWhClMBLCxXZgSwKQQSHLmZZsZzLWNKQWCqTnQdGSWtmxgSKNdFwxmxRRGPnGHjCq" target="_blank">rayanbennaceur.pro@gmail.com</a>
+            </div>
+            <div class="call">
+                <p><strong>Call me</strong></p>
+                <p>06 95 72 29 19</p>
+            </div>
+        </div>  
+        <br>  
+        <p>Copyright 2025 © Rayan BENNACEUR</p>
+    </div>
 </footer>
 </html>
