@@ -1,0 +1,246 @@
+/* Tout */
+
+* {
+    font-family: "Open sans";
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+h1{
+    font-family: "Libre Baskerville";
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.5em;
+    font-family: "Lobster";
+    text-align: center;
+}
+
+h4{
+    font-size: 1.1em;
+}
+
+h2, h4{
+    margin-top: 30px;
+}
+
+a{
+    color: white;
+}
+
+/* Navigation */
+
+header{
+    color: white;
+    text-align: center;
+    position: sticky;
+    background-color: rgb(247, 110, 69);
+    padding: 30px;
+}
+
+/* rgb(53, 19, 107);*/
+
+.menu{
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    border: 2px;
+}
+
+.menu > li a{
+    font-family: "Open sans";
+    font-size: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: block;
+    background-color:  rgb(247, 110, 69);
+    padding: 15px;
+    
+}
+
+.sous-nav li a{
+    background-color: rgb(247, 176, 155);
+    
+}
+
+.menu a:hover {
+    background-color: rgb(247, 176, 155);
+}
+
+.deroul{
+    position: relative;
+    padding-right: 10px;
+}
+
+.sous-nav{
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: rgb(247, 176, 155);
+    top: 100%;              
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 8px 0;
+}
+
+.deroul:hover .sous-nav{
+    display: block;
+    text-align: center;
+    max-width: fit-content;
+
+}
+
+/*Body*/
+
+body{
+    background-color: white;
+}
+
+/*Body - accueil*/
+
+.bienvenue{
+    font-size: 4em;
+    margin-bottom: 100px;
+}
+
+.accueil img{
+    margin-right: 100px;
+}
+
+.accueil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.accueil a{
+    background-color: black;
+    
+}
+
+.textacc{
+    transform: translateY(+25%);
+    display: flex;
+    flex-direction: column;
+}
+
+/*Body - À propos de moi*/
+
+.moi{
+    line-height: 1.6;
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+/*Body - BTS*/
+
+.bloc-bts{
+    text-align: center;
+    padding: 50px;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+}
+
+.option p, h3{
+    text-align: center;
+}
+
+.option{
+    max-width: 900px;
+    padding: 20px;
+}
+
+.option ul{
+    font-size: 1.1em;
+    transform: translateX(+30%);
+}
+
+.option ul li{
+    margin: 6px 0;
+}
+
+/*Body - Centre d'intérêts*/
+
+.bloc-apropos1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    padding: 40px 0;
+    justify-content: space-around;
+}
+
+.bloc-apropos2{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bloc-apropos2 h3{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.bloc-apropos2 p{
+    padding: 20px;
+}
+
+.interet{
+    display: block; 
+    border-radius: 15%;
+    margin: 0 auto 20px auto;
+}
+
+.titre-interet{
+    text-align: center;
+}
+
+/*Footer*/
+footer{
+    background-color: rgb(247, 110, 69);
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    font-size: 1.1em;
+}
+
+footer a:hover{
+    color: rgb(255, 201, 184);
+    text-decoration: underline;
+}
+
+.bloc-footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bloc-footer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logo-footer{
+    margin: 10px;
+}
+
+.logo-footer:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
