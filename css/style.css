@@ -43,60 +43,6 @@ header{
     padding: 30px;
 }
 
-/* rgb(53, 19, 107);*/
-
-.menu{
-    justify-content: center;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    border: 2px;
-}
-
-.menu > li a{
-    font-family: "Open sans";
-    font-size: 20px;
-    margin-right: 30px;
-    margin-left: 30px;
-    display: block;
-    background-color:  rgb(247, 110, 69);
-    padding: 15px;
-    
-}
-
-.sous-nav li a{
-    background-color: rgb(247, 176, 155);
-    
-}
-
-.menu a:hover {
-    background-color: rgb(247, 176, 155);
-}
-
-.deroul{
-    position: relative;
-    padding-right: 10px;
-}
-
-.sous-nav{
-    list-style: none;
-    display: none;
-    position: absolute;
-    background-color: rgb(247, 176, 155);
-    top: 100%;              
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    padding: 8px 0;
-}
-
-.deroul:hover .sous-nav{
-    display: block;
-    text-align: center;
-    max-width: fit-content;
-
-}
-
 /*Body*/
 
 body{
@@ -140,6 +86,47 @@ body{
     text-align: center;
     padding: 30px;
 }
+
+.carousel-continu {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 70%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200%); /* on double la largeur pour la boucle */
+  animation: defilement 30s linear infinite;
+}
+
+.carousel-track img {
+  /* width: 100px;
+  height: 100px; ajuste selon la hauteur que tu veux */
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: 10px; /* petit espace entre les images */
+  border-radius: 10px; /* optionnel, pour arrondir les coins */
+}
+
+
+/* Animation douce et infinie */
+@keyframes defilement {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  background-image: inherit;
+}
+
 
 /*Body - BTS*/
 

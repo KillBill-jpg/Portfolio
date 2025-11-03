@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>À propos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <header>
@@ -125,11 +125,37 @@
     <img src="images\#" alt="">
     <h2 id="certif">Mes compétences</h2>
     <center><p>____</p></center>
-    <img src="images/html.png" alt="logo" width="100" height="100"> <img src="images/css.png" alt="logo" width="100" height="100"> <img src="images/javascript.png" alt="logo" width="100" height="100"> <img src="images/php.png" alt="logo" width="130"> <img src="images/java.png" alt="logo" width="130">
+    <center>
+    <div class="carousel-continu">
+        <div class="carousel-track">
+            <img src="images/html5.svg" alt="logo" width="200" height="auto">
+            <img src="images/css3.svg" alt="logo" width="auto" height="200">
+            <img src="images/javascript.ai" alt="logo">
+            <img src="images/php.eps" alt="logo">
+            <img src="images/java.svg" alt="logo" width="auto" height="200">
+            <img src="images/wordpress.svg" alt="logo" width="auto" height="200">
+            <img src="images/bootstrap.eps" alt="logo">
+            <img src="images/github" alt="logo">
+
+        </div>
+    </div>
+    </center>
+    <script>
+        const track = document.querySelector('.carousel-track');
+
+        // Combien de fois tu veux dupliquer le contenu
+        const repetitions = 9; // essaie 2, 3, 4 selon ton envie
+
+        for (let i = 0; i < repetitions; i++) {
+            track.innerHTML += track.innerHTML;
+        }
+    </script>
+
     <p>HTML</p> <p>CSS</p> <p>Javascript</p> <p>PHP</p> <p>Java</p>
     <h2>Mes certifications</h2>
     <center><p>____</p></center>
     <p>bananes</p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 <footer>
@@ -148,7 +174,7 @@
             </div>
             <div class="call">
                 <p><strong>Call me</strong></p>
-                <p>06 95 72 29 19</p>
+                <br><p>06 95 72 29 19</p>
             </div>
         </div>  
         <br>  
