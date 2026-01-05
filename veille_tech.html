@@ -14,47 +14,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>Veille technologique</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style_veille.css">
 </head>
 
 <header>
 <h1>Rayan BENNACEUR</h1>
-    <p>_________________________________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Accueil</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="a_propos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            À propos
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="a_propos.html#a_propos">À propos de moi</a></li>
-            <li><a class="dropdown-item" href="a_propos.html#bts">BTS SIO</a></li>
-            <li><a class="dropdown-item" href="a_propos.html#certif">Mes certifications</a></li>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Accueil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="a_propos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                À propos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="a_propos.html#a_propos">À propos de moi</a></li>
+                <li><a class="dropdown-item" href="a_propos.html#bts">BTS SIO</a></li>
+                <li><a class="dropdown-item" href="a_propos.html#certif">Mes certifications</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projets.html">Mes projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="veille_tech.html">Veille technologique</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="projets.html">Mes projets</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="veille_tech.html">Veille technologique</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        </div>
+      </div>
+    </nav>
 </header>
 
 <body>
-  <div>
+  <div class="bloc_body">
       <div>
         <h2>Introduction</h2>
         <p>
@@ -71,22 +71,22 @@
         <p>
           Les outils de hacking interviennent à différentes étapes d’une attaque. Afin de rendre leur fonctionnement plus clair, il est pertinent de les regrouper par usage, tout en conservant une explication détaillée de leur rôle.
         </p>
-        <h4>Outils de reconnaissance</h4>
-        <p>
-          Avant toute tentative d’intrusion, les hackers réalisent une phase de reconnaissance. Celle-ci consiste à collecter des informations sur la cible afin d’identifier des points d’entrée potentiels. Des outils comme Nmap sont utilisés pour analyser les ports ouverts, les services actifs et parfois même le système d’exploitation d’une machine. Whois permet d’obtenir des informations liées aux noms de domaine, tandis que Maltego aide à visualiser les relations entre domaines, adresses IP et organisations. <br>
-          Cette phase est essentielle, car elle conditionne la suite de l’attaque. Plus les informations récoltées sont précises, plus l’attaque a de chances d’aboutir.
-        </p>
-        <h4>Outils d’analyse et d’exploitation de failles</h4>
-        <p>
-          Une fois la reconnaissance terminée, les hackers cherchent à exploiter les vulnérabilités découvertes. Pour cela, ils s’appuient sur des frameworks et des scanners spécialisés. Metasploit est largement utilisé pour tester et exploiter des failles connues dans des systèmes ou des applications. Des outils comme Nessus ou OpenVAS permettent quant à eux de détecter automatiquement les vulnérabilités présentes sur une infrastructure. <br>
-          Ces outils sont également employés par les professionnels de la cybersécurité afin d’anticiper les attaques et corriger les failles avant qu’elles ne soient exploitées.
-        </p>
       </div>
       <div>
         <img src="images/deroule_cyberattaque.png" alt="">
         <p></p>
       </div>
     </div>
+    <h4>Outils de reconnaissance</h4>
+    <p>
+      Avant toute tentative d’intrusion, les hackers réalisent une phase de reconnaissance. Celle-ci consiste à collecter des informations sur la cible afin d’identifier des points d’entrée potentiels. Des outils comme Nmap sont utilisés pour analyser les ports ouverts, les services actifs et parfois même le système d’exploitation d’une machine. Whois permet d’obtenir des informations liées aux noms de domaine, tandis que Maltego aide à visualiser les relations entre domaines, adresses IP et organisations. <br>
+      Cette phase est essentielle, car elle conditionne la suite de l’attaque. Plus les informations récoltées sont précises, plus l’attaque a de chances d’aboutir.
+    </p>
+    <h4>Outils d’analyse et d’exploitation de failles</h4>
+    <p>
+      Une fois la reconnaissance terminée, les hackers cherchent à exploiter les vulnérabilités découvertes. Pour cela, ils s’appuient sur des frameworks et des scanners spécialisés. Metasploit est largement utilisé pour tester et exploiter des failles connues dans des systèmes ou des applications. Des outils comme Nessus ou OpenVAS permettent quant à eux de détecter automatiquement les vulnérabilités présentes sur une infrastructure. <br>
+      Ces outils sont également employés par les professionnels de la cybersécurité afin d’anticiper les attaques et corriger les failles avant qu’elles ne soient exploitées.
+    </p>
     <h4>Outils dédiés aux applications web</h4>
     <p>
       Les applications web constituent des cibles privilégiées, car elles sont accessibles publiquement et souvent complexes. Burp Suite et OWASP ZAP permettent d’analyser les échanges entre un navigateur et un serveur web afin de repérer des failles telles que les injections SQL ou les attaques XSS. SQLmap automatise l’exploitation des vulnérabilités liées aux bases de données, ce qui le rend particulièrement efficace. <br>
@@ -117,7 +117,7 @@
     </p>
 
     
-    <div>
+    <div class="articles">
       <div class="card" style="width: 18rem;">
         <img src="images/screen_france_travail.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -131,7 +131,7 @@
         <img src="images/impact_cyber.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">cybermalveillance.gouv.fr</h5>
-          <p class="card-text">Baromètre national de la maturite cyber des TPE-PME</p>
+          <p class="card-text">Baromètre national de la maturité cyber des TPE-PME.</p>
           <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/etude-maturite-cyber-tpe-pme-2025" class="btn btn-primary">En savoir plus</a>
         </div>
       </div>
@@ -140,10 +140,20 @@
         <img src="images/attaque-ministere.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">IT-Connect.fr</h5>
-          <p class="card-text">Cyberattaque ministère de l’Intérieur :...</p>
+          <p class="card-text">Cyberattaque ministère de l’Intérieur : ...</p>
           <a href="https://www.it-connect.fr/cyberattaque-ministere-de-linterieur-les-pirates-ont-bien-eu-acces-a-des-fichiers-importants/" class="btn btn-primary">En savoir plus</a>
         </div>
       </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="images/types_piratage.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Info.Gouv.fr</h5>
+          <p class="card-text">Quelles sont les principales méthodes de piratage ?</p>
+          <a href="https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/assurer-sa-cybersecurite-et-la-protection-de-ses-3#" class="btn btn-primary">En savoir plus</a>
+        </div>
+      </div>
+
     </div>
     
 
@@ -169,7 +179,7 @@
             </div>
             <div class="call">
                 <p><strong>Call me</strong></p>
-                <p>06 95 72 29 19</p>
+                <br><p>06 95 72 29 19</p>
             </div>
         </div>  
         <br>  
