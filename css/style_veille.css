@@ -17,9 +17,9 @@ h2{
     font-size: 2.5em;
 }
 
-h4{
+/* h4{
     font-size: 1.1em;
-}
+} */
 
 h2, h4{
     padding-top: 20px;
@@ -56,12 +56,17 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 30px;
+}
+
+.sources{
+    font-size: small;
 }
 
 /*Footer*/
 footer{
     /* background-color: rgb(247, 110, 69); */
-    
+    padding-top: 30px;
     text-align: center;
 }
 
