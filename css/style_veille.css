@@ -68,10 +68,24 @@ body{
     padding-top: 20px;
 }
 
+.lien_outils{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translate(-50px);
+    padding-top: 50px;
+}
+
+.lien_outils a:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
 /*Footer*/
 footer{
     /* background-color: rgb(247, 110, 69); */
-    padding-top: 30px;
+    padding-top: 100px;
     text-align: center;
 }
 
