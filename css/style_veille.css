@@ -82,6 +82,11 @@ body{
     transform: scale(1.5);
 }
 
+.chaines_yt{
+    padding-top: 100px;
+}
+
+
 /*Footer*/
 footer{
     /* background-color: rgb(247, 110, 69); */
