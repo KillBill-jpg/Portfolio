@@ -63,10 +63,12 @@ p.separator{
 .bloc-apropos2 h3{
     font-size: 1.2rem;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .bloc-apropos2 p{
     padding: 20px;
+    text-align: justify;
 }
 
 .interet{
@@ -83,8 +85,12 @@ p.separator{
     flex-direction: row;
 }
 
-.options p, h3 {
+.options h3{
     text-align: center;
+}
+
+.options p{
+    text-align: justify;
 }
 
 .option{
@@ -93,6 +99,7 @@ p.separator{
 }
 
 .option ul{
+    padding-left: 200px;
     font-size: 1.1em;
 }
 
@@ -140,7 +147,9 @@ p.separator{
   background-image: inherit;
 }
 
-
+.e5{
+    text-align: justify;
+}
 
 
 
