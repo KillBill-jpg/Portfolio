@@ -1,0 +1,154 @@
+* {
+    font-family: "Open sans";
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+h1{
+    font-family: "Libre Baskerville";
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+/* h4{
+    font-size: 1.1em;
+} */
+
+h2, h4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Lobster";
+}
+
+/* Navigation */
+
+header{
+    background-color: white;
+    position: sticky;
+    padding: 30px;
+}
+
+/*Body*/
+
+.contact-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 35px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* TITRES */
+.contact-card h1 {
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.contact-card .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input,textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #c33764;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* BOUTON */
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #c33764;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: #a52a52;
+    transform: translateY(-2px);
+}
+
+
+
+
+/*Footer*/
+footer{
+    background-color:white;
+    padding-top: 100px;
+    text-align: center;
+}
+
+footer a{
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: rgb(255, 201, 184);
+    text-decoration: underline;
+}
+
+.bloc-footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bloc-footer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logo-footer{
+    margin: 10px;
+}
+
+.logo-footer:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
