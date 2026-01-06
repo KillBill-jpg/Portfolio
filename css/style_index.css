@@ -1,0 +1,106 @@
+* {
+    font-family: "Open sans";
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+h1{
+    font-family: "Libre Baskerville";
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+/* h4{
+    font-size: 1.1em;
+} */
+
+h2, h4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Lobster";
+}
+
+/* Navigation */
+
+header{
+    position: sticky;
+    padding: 30px;
+}
+
+/*Body*/
+body{
+    padding : 30px;
+}
+
+.bienvenue{
+    font-size: 4em;
+    margin-bottom: 100px;
+}
+
+.accueil img{
+    margin-right: 100px;
+}
+
+.accueil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.accueil a{
+    background-color: black;
+    
+}
+
+.textacc{
+    transform: translateY(+25%);
+    display: flex;
+    flex-direction: column;
+}
+
+/*Footer*/
+footer{
+    /* background-color: rgb(247, 110, 69); */
+    padding-top: 100px;
+    text-align: center;
+}
+
+footer a{
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: rgb(255, 201, 184);
+    text-decoration: underline;
+}
+
+.bloc-footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bloc-footer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logo-footer{
+    margin: 10px;
+}
+
+.logo-footer:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
