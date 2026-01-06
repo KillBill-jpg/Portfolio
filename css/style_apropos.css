@@ -111,17 +111,16 @@ p.separator{
 
 .carousel-track {
   display: flex;
-  width: calc(200%); /* on double la largeur pour la boucle */
+  width: calc(250%); /* on double la largeur pour la boucle */
   animation: defilement 30s linear infinite;
 }
 
 .carousel-track img {
-  /* width: 100px;
-  height: 100px; ajuste selon la hauteur que tu veux */
+  /* width: 100px; */
+  height: 100px; /*ajuste selon la hauteur que tu veux */
   object-fit: cover;
   flex-shrink: 0;
-  margin-right: 10px; /* petit espace entre les images */
-  border-radius: 10px; /* optionnel, pour arrondir les coins */
+  margin-right: 40px; /* petit espace entre les images */
 }
 
 /* Animation douce et infinie */
@@ -137,7 +136,7 @@ p.separator{
 .carousel-track::after {
   content: "";
   display: flex;
-  width: 100%;
+  width: 120%;
   background-image: inherit;
 }
 
