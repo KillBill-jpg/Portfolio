@@ -39,13 +39,18 @@ body{
     padding : 30px;
 }
 
+.container-projets{
+    display: flex;
+    flex-direction: column;
+}
+
 .projets{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 30px;
-} 
-
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
 
 
 /*Footer*/
