@@ -40,6 +40,11 @@ p.separator{
     padding-top: 60px;
 }
 
+.problematique{
+    margin-left: 60px;
+    font-size: 1.3em;
+}
+
 .bloc_body{
     display: flex;
     flex-direction: row;
@@ -80,6 +85,11 @@ body{
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
+}
+
+.date{
+    font-size: small;
+    color: gray;
 }
 
 .chaines_yt{
