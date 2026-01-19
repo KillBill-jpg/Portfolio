@@ -27,6 +27,10 @@ h2, h4{
     font-family: "Lobster";
 }
 
+.lui{
+    margin-top: 150px;
+}
+
 /* Navigation */
 
 header{
@@ -49,14 +53,14 @@ body{
 
 .row {
   display: flex;
-  justify-content: space-around; /* équivalent space-around */
+  justify-content: space-around;
   gap: 2rem;
   margin-bottom: 4rem;
 }
 
 .card {
   background: #fff;
-  width: 500px; /* taille maîtrisée */
+  width: 500px;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   text-align: center;
