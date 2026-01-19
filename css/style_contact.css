@@ -45,6 +45,7 @@ body{
 }
 
 .contact-card {
+    margin-top: 70px;
     background: #ffffff;
     width: 100%;
     max-width: 480px;
@@ -77,6 +78,7 @@ label {
     font-weight: 600;
     margin-bottom: 6px;
     color: #333;
+    text-align: left;
 }
 
 input,textarea {

@@ -17,9 +17,6 @@ h2{
     font-size: 2.5em;
 }
 
-/* h4{
-    font-size: 1.1em;
-} */
 
 h2, h4{
     padding-top: 20px;
@@ -30,13 +27,17 @@ h2, h4{
 /* Navigation */
 
 header{
+    background-color: white;
     position: sticky;
     padding: 30px;
+    color: black;
 }
 
 /*Body*/
 body{
+    color: white;
     padding : 30px;
+    background: linear-gradient(135deg, #1d2671, #c33764);
 }
 
 p.separator{
@@ -48,7 +49,6 @@ p.separator{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    /* text-align: center; */
     padding: 40px 0;
     justify-content: space-around;
 }
@@ -171,9 +171,11 @@ p.separator{
 
 /*Footer*/
 footer{
-    /* background-color: rgb(247, 110, 69); */
-    padding-top: 100px;
+    background-color:white;
+    margin-top: 100px;
+    padding-top: 30px;
     text-align: center;
+    color: black;
 }
 
 footer a{
