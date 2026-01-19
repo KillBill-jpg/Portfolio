@@ -37,6 +37,13 @@ header{
 
 /*Body*/
 
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .contact-card {
     background: #ffffff;
     width: 100%;
