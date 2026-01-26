@@ -44,6 +44,102 @@ p.separator{
     padding-top: 60px;
 }
 
+.moi{
+    margin-bottom: 150px;
+}
+
+.jsp a{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.jsp a:hover{
+    color: rgb(255, 201, 184);
+
+}
+
+/*À propos de moi*/
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #fffc41; /* ligne centrale */
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 1rem;
+  width: 20px;
+  height: 20px;
+  background-color: #fffc41;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -10px; /* aligne sur la ligne centrale */
+}
+
+.timeline-item.right .timeline-dot {
+  left: -10px; /* aligne sur la ligne centrale */
+}
+
+.timeline-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 90%;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.2rem 0;
+  color: #333;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #666;
+}
+
+/* Animation quand visible */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /*intérêts*/
 .bloc-apropos1{
     display: flex;

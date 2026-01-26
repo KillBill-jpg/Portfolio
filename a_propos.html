@@ -60,7 +60,65 @@
         <h4 id="a_propos">Mon histoire</h4>
         <br><p>Je m'appelle Rayan BENNACEUR et je suis âgé de 23 ans. <br> Je suis titulaire d'un baccalauréat général spécialité Physique-Chimie et SVT option mathématique, et je suis suis actuellement en 2e année de BTS SIO spécialité SLAM <em>(Solutions Logiciels et Applications Métiers)</em>.</p>
         <p>Je suis passionné de nouvelles technologies et je souhaite faire carrière dans ce secteur. <br> Évoluer dans le domaine de l'informatique, étudier en profondeur les différents aspects des métiers de l'informatique, me mettent au service de l'innovation technique qui régit notre monde, sont autant d'arguments qui motivent mon choix.</p>
-    </div>    
+        <p>Voici mon parcours afin de vous permettre de mieux comprendre d'où je viens :</p>
+    </div> 
+    
+    <div class="timeline">
+        <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+            <h3>Baccalauréat Général - Physique-Chimie/SVT</h3>
+            <p>Lycée Guillaume Budé - Limeil-Brévannes</p>
+            <p>2018/2021</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+            <h3>BUT - Génie thermique et énergie</h3>
+            <p>Université Paris-Est Marne-la-Vallée - Champs-sur-Marne</p>
+            <p>2021/2022</p>
+            </div>
+        </div>
+
+        <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+            <h3>BUT - Mesure physique</h3>
+            <p>Université Paris-Est Créteil - Créteil</p>
+            <p>2022/2023</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+            <h3>BTS - Services Informatique aux Organisations</h3>
+            <p>École IRIS Paris - Paris 17</p>
+            <p>2024/2026</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="jsp">Quant à mon parcours professionnel, il est décrit dans mon <a href="documents/CV.pdf"target="_blank">CV</a>, ou dans <a href="projets.html">mes projets professionnelles</a> !</p>
+
+    <script>
+        const items = document.querySelectorAll('.timeline-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+            });
+        }, { threshold: 0.1 });
+
+        items.forEach(item => observer.observe(item));
+    </script>
+
+
+
     <h4 class="titre-interet"><br><br>Mes centres d'intérêts <br></h4>
     <div class="bloc-apropos1">
         <div class="bloc-apropos2">
