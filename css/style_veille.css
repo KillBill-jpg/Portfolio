@@ -46,12 +46,22 @@ header{
 /*Body*/
 
 p.separator{
-    padding-top: 60px;
+    margin-top: 250px;
+    padding-bottom: 50px;
 }
 
 .problematique{
     margin-left: 60px;
-    font-size: 1.3em;
+    font-size: 1.15em;
+    transform: translateY(-32%);
+    color: #fffc41;
+}
+
+.problematique2{
+    margin-right: 60px;
+    font-size: 1.15em;
+    transform: translateY(-32%);
+    color: #fffc41;
 }
 
 .bloc_body{
@@ -59,8 +69,6 @@ p.separator{
     flex-direction: row;
     padding-right: 30px;
     color: white;
-    
-    
 }
 
 .bloc_body p{
@@ -73,6 +81,11 @@ body{
     background: linear-gradient(135deg, #1d2671, #c33764);
 }
 
+.second{
+    text-align: right;
+}
+
+/*Cards*/
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 0.5rem 1rem rgb(255, 255, 255);
