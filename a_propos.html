@@ -16,7 +16,6 @@
     }
     .page-hero p { max-width: 650px; font-size: 1.05rem; }
 
-    /* ── Timeline : toujours visible, pas d'animation au scroll ── */
     .timeline {
       position: relative;
       padding: 2rem 0;
@@ -36,7 +35,6 @@
       position: relative;
       width: 50%;
       padding: 0.5rem 2.5rem 2rem;
-      /* plus d'opacity:0 ni de transform — visible par défaut */
     }
     .tl-item.left  { left: 0;   text-align: right; }
     .tl-item.right { left: 50%; text-align: left;  }
@@ -62,7 +60,6 @@
     .tl-card p    { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin: 0; }
     .tl-card .tl-year { font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 0.3rem; }
 
-    /* Interests */
     .interests-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -81,7 +78,6 @@
     .interest-card h3  { font-size: 1rem; margin-bottom: 0.5rem; color: var(--accent); }
     .interest-card p   { font-size: 0.875rem; }
 
-    /* BTS Options */
     .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
     .option-card {
       background: rgba(255,255,255,0.07);
@@ -96,7 +92,6 @@
     .option-card ul li { font-size: 0.875rem; color: rgba(255,255,255,0.75); padding-left: 1.2rem; position: relative; }
     .option-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
 
-    /* ── Carousel infini pur CSS ── */
     .carousel-wrap {
       overflow: hidden;
       position: relative;
@@ -117,7 +112,6 @@
     .carousel-track {
       display: flex;
       gap: 2.5rem;
-      /* La largeur est fixée par JS après duplication */
       animation: scrollTrack 25s linear infinite;
     }
     .carousel-track img {
@@ -129,7 +123,6 @@
       transition: opacity 0.3s;
     }
     .carousel-track img:hover { opacity: 1; }
-    /* L'animation déplace exactement la moitié du track (le set original) */
     @keyframes scrollTrack {
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
@@ -173,7 +166,6 @@
 
 <div class="page-content">
 
-  <!-- HERO -->
   <section class="page-hero" id="a_propos">
     <div class="section-tag">À propos de moi</div>
     <h2>Mon histoire</h2>
@@ -187,7 +179,6 @@
 
   <div class="divider"></div>
 
-  <!-- TIMELINE -->
   <section class="page-content" style="padding-top:0">
     <div class="section-tag">Parcours</div>
     <h2>Mon parcours</h2>
@@ -229,7 +220,6 @@
 
   <div class="divider"></div>
 
-  <!-- INTERESTS -->
   <section>
     <div class="section-tag">Loisirs</div>
     <h2>Mes centres d'intérêts</h2>
@@ -254,7 +244,6 @@
 
   <div class="divider"></div>
 
-  <!-- BTS SIO -->
   <section id="bts">
     <div class="section-tag">Formation</div>
     <h2>Qu'est-ce que le BTS SIO ?</h2>
@@ -287,7 +276,6 @@
 
   <div class="divider"></div>
 
-  <!-- E5 -->
   <section>
     <div class="section-tag">Épreuve</div>
     <h2>Qu'est-ce que l'épreuve E5 ?</h2>
@@ -299,7 +287,6 @@
 
   <div class="divider"></div>
 
-  <!-- SKILLS -->
   <section id="certif">
     <div class="section-tag">Compétences</div>
     <h2>Mes compétences techniques</h2>
@@ -322,7 +309,6 @@
 
   <div class="divider"></div>
 
-  <!-- CERTIFS -->
   <section>
     <div class="section-tag">Certifications</div>
     <h2>Mes certifications</h2>
