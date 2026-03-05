@@ -1,199 +1,263 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Projets</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style_projet.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets – Rayan BENNACEUR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .proj-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .proj-card-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 130px;
+      background: rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .proj-card-img img {
+      max-height: 80px;
+      max-width: 80%;
+      object-fit: contain;
+    }
+
+    .proj-card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-card-body h5 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .proj-card-body p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .proj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .proj-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      background: rgba(255,252,65,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(255,252,65,0.25);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .proj-card-body .btn-primary {
+      font-size: 0.82rem;
+      padding: 0.5rem 1rem;
+      align-self: flex-start;
+    }
+
+    @media (max-width: 600px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
 <header>
-<h1>Rayan BENNACEUR</h1>
-    <p>_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Accueil</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="a_propos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                À propos
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="a_propos.html#a_propos">À propos de moi</a></li>
-                <li><a class="dropdown-item" href="a_propos.html#bts">BTS SIO</a></li>
-                <li><a class="dropdown-item" href="a_propos.html#certif">Mes certifications</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projets.html">Mes projets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="veille_tech.html">Veille technologique</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rayan <span>BENNACEUR</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <a href="a_propos.html">À propos ▾</a>
+        <div class="dropdown-menu">
+          <div class="dropdown-menu-inner">
+            <a href="a_propos.html#a_propos">À propos de moi</a>
+            <a href="a_propos.html#bts">BTS SIO</a>
+            <a href="a_propos.html#certif">Mes certifications</a>
+          </div>
         </div>
       </div>
+      <a href="projets.html">Mes projets</a>
+      <a href="veille_tech.html">Veille technologique</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </div>
 </header>
 
-<body>
-    <h2>Mes projets</h2>
-    <p>____</p>
+<div class="page-content">
 
+  <div class="section-tag">Portfolio</div>
+  <h2>Mes projets</h2>
+  <p style="max-width:600px; margin-bottom:3rem;">Découvrez les projets scolaires et professionnels réalisés au cours de ma formation BTS SIO SLAM.</p>
 
-    <h4>Mes projets scolaires</h4>
-    <!-- Rangée 1 -->
-    <div class="row">
-      <div class="card">
-        <img src="images/logo_glpi.png" alt="Logo">
-        <div class="card-body">
-          <h5>GLPI</h5>
-          <br><p>Installation et utilisation d'un système de gestion de parc informatique.</p>
-          <li>✅Gestion de système de Gestion de Parc Informatique</li>
-          <li>✅Gestion des utilisateurs et des rôles</li>
-          <li>✅Administration et configuration de serveurs Linux</li>
-          <br>
-          <a href="documents/GLPI.pdf" class="btn" target="_blank">
-            Ouvrir le document
-          </a>
-        </div>
+  <!-- SCOLAIRES -->
+  <div class="section-tag">Scolaires</div>
+  <h4 style="color:white; font-family:'Open Sans',sans-serif; font-size:1.1rem; font-weight:700; margin-bottom:1.5rem; margin-top:0.5rem;">Projets académiques</h4>
+
+  <div class="projects-grid">
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img src="images/logo_glpi.png" alt="GLPI">
       </div>
-
-      <div class="card">
-        <img src="images/e-learning_logo.png" alt="Logo">
-        <div class="card-body">
-          <h5>E-Enseignement</h5>
-          <br><p>Notre premier site d’e-enseignement avec insertion d'un compilateur C/C++</p><br>
-          <li>✅Gestion de projets</li>
-          <li>✅Maitrise de WordPress et de ses extensions</li>
-          <li>✅Solide bases en Elementor</li>
-          <br>
-          <a href="documents/e_learning.pdf" class="btn" target="_blank">
-            Ouvrir le document
-          </a>
+      <div class="proj-card-body">
+        <h5>GLPI</h5>
+        <p>Installation et utilisation d'un système de gestion de parc informatique.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Administration</span>
+          <span class="proj-tag">Linux</span>
+          <span class="proj-tag">ITSM</span>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="images/battaile_navale_logo.jpg" alt="Logo">
-        <div class="card-body">
-          <h5>Bataille Navale en C</h5>
-          <br><p>Refonte du code d'un jeu de bataille navale en C</p><br>
-          <li>✅Ameliorations significatives en language C</li>
-          <li>✅Meilleur comprehension de code fait par autrui</li>
-          <li>✅Apporter des modifications aux codes d'autrui</li>
-          <br>
-          <a href="documents/bataille_navale_C.pdf" class="btn" target="_blank">
-            Ouvrir le document
-          </a>
-        </div>
+        <a href="documents/GLPI.pdf" class="btn-primary" target="_blank">📄 Voir le document</a>
       </div>
     </div>
 
-    <!-- Rangée 2 -->
-    <div class="row">
-      <div class="card">
-        <img src="images/shopify_logo.png" alt="Logo">
-        <div class="card-body">
-          <h5>Projet Shopify</h5>
-          <br><p>Création de notre boutique d'appareils éléctriques avec Shopify</p><br>
-          <li>✅Configurer et personnaliser une boutique Shopify</li>
-          <li>✅Optimisation de l'apparence d'un site pour une navigation intuitive.</li>
-          <br>
-          <a href="documents/shopify.pdf" class="btn" target="_blank">
-            Ouvrir le document
-          </a>
-        </div>
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img src="images/e-learning_logo.png" alt="E-Enseignement">
       </div>
-
-      <div class="card">
-        <img src="images/logo_ns.png" alt="Logo">
-        <div class="card-body">
-          <h5>Neige & Soleil</h5>
-          <br><p>Création de notre site de gestion de locations et de demandes clients</p><br>
-          <li>✅Maîtrise des langages HTML/CSS, PHP et Javascript</li>
-          <li>✅Meilleur connaissances en architecture MVC et SQL</li>
-          <br>
-          <a href="documents/mon-fichier.pdf" class="btn" target="_blank">
-            Ouvrir le document
-          </a>
+      <div class="proj-card-body">
+        <h5>E-Enseignement</h5>
+        <p>Premier site d'e-enseignement avec insertion d'un compilateur C/C++.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">WordPress</span>
+          <span class="proj-tag">Elementor</span>
+          <span class="proj-tag">Gestion de projet</span>
         </div>
+        <a href="documents/e_learning.pdf" class="btn-primary" target="_blank">📄 Voir le document</a>
       </div>
     </div>
 
-    
-    <h4 class="lui">Mes projets professionnels</h4>
-    <!-- Rangée 1 -->
-    <div class="row">
-      <div class="card">
-        <img src="logo.png" alt="Logo">
-        <div class="card-body">
-          <br><p>Description du document</p><br>
-          <a href="documents/mon-fichier.pdf" class="btn" target="_blank">
-            Ouvrir le document
-          </a>
-        </div>   
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img src="images/battaile_navale_logo.jpg" alt="Bataille Navale">
       </div>
-      
-      <div class="card">
-        <img src="images/logo_stage.png" alt="Logo">
-        <div class="card-body">
-          <h5>Stage de 2e année</h5>
-          <br><p>Refonte d'une application à l'aide du logiciel no-code Ksaar</p><br>
-          <li>✅Maîtrise du développement d’application no-code</li>
-          <li>✅Solides base en modélisation de bases de données</li>
-          <li>✅Sensibilisation à l’accessibilité numérique DSFR/RGAA</li>
-          <br>
-          <a href="documents/Rapport de stage BTS SIO SLAM.pdf" class="btn" target="_blank">
-            Ouvrir le document
-          </a>
+      <div class="proj-card-body">
+        <h5>Bataille Navale en C</h5>
+        <p>Refonte du code d'un jeu de bataille navale en C.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Langage C</span>
+          <span class="proj-tag">Algorithmique</span>
         </div>
+        <a href="documents/bataille_navale_C.pdf" class="btn-primary" target="_blank">📄 Voir le document</a>
       </div>
     </div>
 
-    
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img src="images/shopify_logo.png" alt="Shopify">
+      </div>
+      <div class="proj-card-body">
+        <h5>Projet Shopify</h5>
+        <p>Création d'une boutique d'appareils électriques avec Shopify.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Shopify</span>
+          <span class="proj-tag">E-commerce</span>
+          <span class="proj-tag">UX/UI</span>
+        </div>
+        <a href="documents/shopify.pdf" class="btn-primary" target="_blank">📄 Voir le document</a>
+      </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img src="images/logo_ns.png" alt="Neige & Soleil">
+      </div>
+      <div class="proj-card-body">
+        <h5>Neige & Soleil</h5>
+        <p>Site de gestion de locations et de demandes clients.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">PHP</span>
+          <span class="proj-tag">SQL</span>
+          <span class="proj-tag">MVC</span>
+          <span class="proj-tag">JavaScript</span>
+        </div>
+        <a href="documents/mon-fichier.pdf" class="btn-primary" target="_blank">📄 Voir le document</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROFESSIONNELS -->
+  <div class="section-tag">Professionnels</div>
+  <h4 style="color:white; font-family:'Open Sans',sans-serif; font-size:1.1rem; font-weight:700; margin-bottom:1.5rem; margin-top:0.5rem;">Expériences en entreprise</h4>
+
+  <div class="projects-grid">
+    <div class="proj-card">
+      <div class="proj-card-img">
+        <img src="images/logo_stage.png" alt="Stage 2e année">
+      </div>
+      <div class="proj-card-body">
+        <h5>Stage de 2e année</h5>
+        <p>Refonte d'une application à l'aide du logiciel no-code Ksaar. Modélisation de bases de données et sensibilisation à l'accessibilité DSFR/RGAA.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Ksaar</span>
+          <span class="proj-tag">No-code</span>
+          <span class="proj-tag">Base de données</span>
+          <span class="proj-tag">RGAA</span>
+        </div>
+        <a href="documents/Rapport de stage BTS SIO SLAM.pdf" class="btn-primary" target="_blank">📄 Rapport de stage</a>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <footer>
-    <div class="bloc-footer1">
-        <h3>Mes coordonnées</h3>
-        <div class="bloc-footer2">
-            <div class="follow">
-                <p><strong>Follow me</strong></p>
-                <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank"><img src="images/linkedin.png" width="40" height="40" class="logo-footer"></a>
-                <a href="https://github.com/KillBill-jpg"  target="_blank"><img src="images/github.png" width="40" height="40" class="logo-footer"></a>
-            </div>
-            <div class="mail">
-                <p><strong>Email</strong></p>
-                <br>
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDxqWLWhClMBLCxXZgSwKQQSHLmZZsZzLWNKQWCqTnQdGSWtmxgSKNdFwxmxRRGPnGHjCq" target="_blank">rayanbennaceur.pro@gmail.com</a>
-            </div>
-            <div class="call">
-                <p><strong>Call me</strong></p>
-                <br><p>06 95 72 29 19</p>
-            </div>
-        </div>  
-        <br>  
-        <p>Copyright 2025 © Rayan BENNACEUR</p>
+  <h3>Mes coordonnées</h3>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <strong>Follow me</strong>
+      <div class="footer-logos">
+        <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/KillBill-jpg" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      </div>
     </div>
+    <div class="footer-col">
+      <strong>Email</strong>
+      <a href="mailto:rayanbennaceur.pro@gmail.com">rayanbennaceur.pro@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <strong>Téléphone</strong>
+      <p>06 95 72 29 19</p>
+    </div>
+  </div>
+  <p class="footer-copy">Copyright 2025 © Rayan BENNACEUR</p>
 </footer>
-</html>

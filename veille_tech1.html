@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille technologique – Rayan BENNACEUR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .problematique-box{background:rgba(255,252,65,0.1);border:1px solid rgba(255,252,65,0.3);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0;color:var(--accent);font-style:italic;font-size:1.05rem;}
+    .articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin:1.5rem 0;}
+    .article-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:12px;overflow:hidden;transition:var(--transition);display:flex;flex-direction:column;}
+    .article-card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,0.25);box-shadow:0 15px 40px rgba(0,0,0,0.25);}
+    .article-card img{width:100%;height:140px;object-fit:cover;}
+    .article-card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column;}
+    .article-source{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:0.25rem;}
+    .article-date{font-size:0.75rem;color:rgba(255,255,255,0.4);margin-bottom:0.75rem;}
+    .article-card-body p{font-size:0.875rem;flex:1;margin-bottom:1rem;}
+    .article-card-body .btn-primary{font-size:0.8rem;padding:0.45rem 0.9rem;align-self:flex-start;}
+    .tools-grid{display:flex;gap:2rem;align-items:center;margin:2rem 0;flex-wrap:wrap;}
+    .tool-link{display:flex;flex-direction:column;align-items:center;gap:0.5rem;padding:1.25rem;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:12px;transition:var(--transition);min-width:120px;text-decoration:none;}
+    .tool-link:hover{background:rgba(255,255,255,0.13);transform:translateY(-4px);border-color:rgba(255,255,255,0.25);}
+    .tool-link img{height:50px;width:auto;object-fit:contain;}
+    .tool-link span{font-size:0.8rem;color:rgba(255,255,255,0.7);text-align:center;}
+    .hats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:1.5rem 0;}
+    .hat-card{border-radius:12px;padding:1.5rem;border:1px solid;transition:var(--transition);}
+    .hat-card:hover{transform:translateY(-4px);}
+    .hat-card.black{background:rgba(0,0,0,0.35);border-color:rgba(255,255,255,0.1);}
+    .hat-card.white{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);}
+    .hat-card.grey{background:rgba(150,150,150,0.15);border-color:rgba(200,200,200,0.2);}
+    .hat-card .hat-icon{font-size:2rem;margin-bottom:0.75rem;}
+    .hat-card h3{font-size:1rem;margin-bottom:0.5rem;color:white;}
+    .hat-card p{font-size:0.85rem;}
+    .red-blue-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0;}
+    .team-card{border-radius:12px;padding:1.75rem;border:1px solid;}
+    .team-card.red{background:rgba(195,55,100,0.15);border-color:rgba(195,55,100,0.4);}
+    .team-card.blue{background:rgba(29,38,113,0.35);border-color:rgba(100,130,255,0.4);}
+    .team-card h3{font-size:1.15rem;margin-bottom:1rem;}
+    .team-card.red h3{color:#ff7fa0;}
+    .team-card.blue h3{color:#7faeff;}
+    .team-card ul{display:flex;flex-direction:column;gap:0.5rem;}
+    .team-card ul li{font-size:0.875rem;color:rgba(255,255,255,0.8);padding-left:1.4rem;position:relative;}
+    .team-card.red ul li::before{content:'⚔';position:absolute;left:0;font-size:0.75rem;}
+    .team-card.blue ul li::before{content:'🛡';position:absolute;left:0;font-size:0.75rem;}
+    .outils-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin:1.5rem 0;}
+    .step{display:flex;gap:1rem;align-items:flex-start;margin-bottom:0.75rem;}
+    .step-num{background:rgba(255,252,65,0.2);color:var(--accent);font-weight:700;font-size:0.8rem;padding:0.2rem 0.6rem;border-radius:6px;white-space:nowrap;}
+    @media(max-width:768px){.hats-grid{grid-template-columns:1fr;}.red-blue-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rayan <span>BENNACEUR</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <a href="a_propos.html">À propos ▾</a>
+        <div class="dropdown-menu">
+          <div class="dropdown-menu-inner">
+            <a href="a_propos.html#a_propos">À propos de moi</a>
+            <a href="a_propos.html#bts">BTS SIO</a>
+            <a href="a_propos.html#certif">Mes certifications</a>
+          </div>
+        </div>
+      </div>
+      <a href="projets.html">Mes projets</a>
+      <a href="veille_tech.html">Veille technologique</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-content">
+
+  <div class="section-tag">Veille n°1 — Cybersécurité</div>
+  <h2>Le Hacking éthique en entreprise</h2>
+
+  <p style="max-width:700px;margin-bottom:1rem;">Avec la multiplication des cyberattaques ciblant les organisations, la cybersécurité est devenue un enjeu stratégique majeur. Mais plutôt que de se contenter de construire des défenses, certaines entreprises ont choisi une approche plus offensive : faire appel à des hackers pour tester leurs propres systèmes.</p>
+
+  <div class="problematique-box">💡 Problématique : Comment les entreprises peuvent-elles utiliser les techniques des hackers pour mieux se défendre ?</div>
+
+  <div class="divider"></div>
+
+  <h4>White hat, Black hat, Grey hat : qui est qui ?</h4>
+  <p>Dans le monde du hacking, on distingue trois grandes catégories de profils, selon leurs motivations et leur rapport à la légalité :</p>
+
+  <div class="hats-grid">
+    <div class="hat-card black">
+      <div class="hat-icon">🎩</div>
+      <h3>Black Hat</h3>
+      <p>Hackers malveillants qui s'introduisent dans les systèmes sans autorisation, dans un but criminel : vol de données, extorsion, sabotage.</p>
+    </div>
+    <div class="hat-card white">
+      <div class="hat-icon">🤍</div>
+      <h3>White Hat</h3>
+      <p>Hackers éthiques mandatés par les entreprises pour tester la solidité de leurs systèmes. Ils agissent dans un cadre légal et contractuel strict.</p>
+    </div>
+    <div class="hat-card grey">
+      <div class="hat-icon">🩶</div>
+      <h3>Grey Hat</h3>
+      <p>Profil intermédiaire : ils peuvent s'introduire dans des systèmes sans autorisation, mais sans intention malveillante, parfois pour signaler une faille.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h4>Le test d'intrusion (Pentest)</h4>
+  <p>Le pentest, ou test d'intrusion, est la méthode principale du hacking éthique. Un professionnel de la sécurité — le pentester — simule une attaque réelle sur les systèmes d'une entreprise pour en révéler les failles avant qu'un cybercriminel ne le fasse.</p>
+
+  <div class="glass-card" style="margin:1.5rem 0;">
+    <h3 style="color:var(--accent);margin-bottom:1rem;">🔁 Les 5 étapes d'un pentest</h3>
+    <div class="step"><span class="step-num">01</span><div><strong style="color:white;">Reconnaissance</strong> <span style="color:rgba(255,255,255,0.65);font-size:0.9rem;">— Collecte d'informations sur la cible (adresses IP, services exposés, employés…)</span></div></div>
+    <div class="step"><span class="step-num">02</span><div><strong style="color:white;">Scan et Analyse</strong> <span style="color:rgba(255,255,255,0.65);font-size:0.9rem;">— Identification des ports ouverts, services actifs et vulnérabilités potentielles</span></div></div>
+    <div class="step"><span class="step-num">03</span><div><strong style="color:white;">Exploitation</strong> <span style="color:rgba(255,255,255,0.65);font-size:0.9rem;">— Tentative d'intrusion réelle en exploitant les failles découvertes</span></div></div>
+    <div class="step"><span class="step-num">04</span><div><strong style="color:white;">Post-exploitation</strong> <span style="color:rgba(255,255,255,0.65);font-size:0.9rem;">— Évaluation de l'impact réel : quelles données auraient pu être volées ?</span></div></div>
+    <div class="step" style="margin-bottom:0;"><span class="step-num">05</span><div><strong style="color:white;">Rapport et Restitution</strong> <span style="color:rgba(255,255,255,0.65);font-size:0.9rem;">— Documentation complète des failles trouvées et recommandations correctives</span></div></div>
+  </div>
+
+  <p>On distingue trois types de pentests selon le niveau d'information fourni au testeur : la <strong style="color:white;">boîte noire</strong> (aucune info, simule un attaquant externe), la <strong style="color:white;">boîte blanche</strong> (accès complet au code et à l'architecture) et la <strong style="color:white;">boîte grise</strong> (accès partiel, simule un employé malveillant).</p>
+
+  <div class="divider"></div>
+
+  <h4>Red Team vs Blue Team</h4>
+  <p>Dans les entreprises disposant d'équipes dédiées à la cybersécurité, on organise souvent des exercices opposant deux camps, qui travaillent ensemble pour améliorer la sécurité globale.</p>
+
+  <div class="red-blue-grid">
+    <div class="team-card red">
+      <h3>🔴 Red Team — Les attaquants</h3>
+      <p style="margin-bottom:1rem;font-size:0.9rem;">Simule des attaques réalistes contre les systèmes de l'entreprise, en adoptant les méthodes des vrais cybercriminels.</p>
+      <ul>
+        <li>Tests d'intrusion sur les réseaux internes et externes</li>
+        <li>Ingénierie sociale (phishing, pretexting…)</li>
+        <li>Exploitation de vulnérabilités zero-day</li>
+        <li>Simulation d'attaques ciblées (APT)</li>
+      </ul>
+    </div>
+    <div class="team-card blue">
+      <h3>🔵 Blue Team — Les défenseurs</h3>
+      <p style="margin-bottom:1rem;font-size:0.9rem;">Surveille, détecte et répond aux attaques simulées afin de renforcer les défenses en temps réel.</p>
+      <ul>
+        <li>Surveillance des logs et alertes de sécurité (SOC)</li>
+        <li>Détection et réponse aux incidents (EDR/SIEM)</li>
+        <li>Mise en place de règles de pare-feu et de filtrage</li>
+        <li>Sensibilisation des employés aux bonnes pratiques</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>L'objectif de ces exercices n'est pas que l'un des deux camps « gagne » : c'est leur confrontation qui permet d'identifier les failles réelles et d'améliorer continuellement la posture de sécurité de l'organisation.</p>
+
+  <div class="divider"></div>
+
+  <h4>Les outils phares du pentester</h4>
+  <p>Le pentester utilise les mêmes outils que les hackers malveillants, mais dans un cadre légal et maîtrisé :</p>
+
+  <div class="outils-grid">
+    <div class="glass-card">
+      <h3 style="color:var(--accent);margin-bottom:0.5rem;">🔍 Kali Linux</h3>
+      <p style="font-size:0.875rem;">Distribution Linux spécialement conçue pour les tests d'intrusion. Elle regroupe des centaines d'outils de sécurité prêts à l'emploi, ce qui en fait l'environnement de référence des pentesters.</p>
+    </div>
+    <div class="glass-card">
+      <h3 style="color:var(--accent);margin-bottom:0.5rem;">🗺️ Nmap</h3>
+      <p style="font-size:0.875rem;">Outil de scan réseau permettant d'identifier les machines actives, les ports ouverts et les services exposés. Indispensable en phase de reconnaissance.</p>
+    </div>
+    <div class="glass-card">
+      <h3 style="color:var(--accent);margin-bottom:0.5rem;">💥 Metasploit</h3>
+      <p style="font-size:0.875rem;">Framework d'exploitation de failles très utilisé en pentest. Il permet de tester des centaines de vulnérabilités connues sur des systèmes cibles de manière automatisée.</p>
+    </div>
+    <div class="glass-card">
+      <h3 style="color:var(--accent);margin-bottom:0.5rem;">🌐 Burp Suite</h3>
+      <p style="font-size:0.875rem;">Outil dédié aux applications web. Il intercepte les échanges entre navigateur et serveur pour détecter des failles comme les injections SQL ou les attaques XSS.</p>
+    </div>
+    <div class="glass-card">
+      <h3 style="color:var(--accent);margin-bottom:0.5rem;">🐉 Wireshark</h3>
+      <p style="font-size:0.875rem;">Analyseur de trafic réseau (sniffer) qui capture en temps réel les paquets circulant sur un réseau. Utile pour détecter des communications suspectes ou non chiffrées.</p>
+    </div>
+    <div class="glass-card">
+      <h3 style="color:var(--accent);margin-bottom:0.5rem;">🐛 Bug Bounty</h3>
+      <p style="font-size:0.875rem;">Programme par lequel une entreprise récompense financièrement les hackers éthiques pour chaque faille signalée. La plateforme française <strong style="color:white;">YesWeHack</strong> est partenaire du Ministère des Armées.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h4>Le cadre légal en France</h4>
+  <p>En France, le hacking — même éthique — est encadré par des textes précis. Le Code pénal (articles 323-1 à 323-7) interdit toute intrusion non autorisée dans un système informatique.</p>
+
+  <div class="glass-card" style="margin:1.5rem 0;">
+    <h3 style="color:var(--accent);margin-bottom:1rem;">⚖️ Les textes clés</h3>
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+      <div>
+        <strong style="color:white;display:block;margin-bottom:0.3rem;">Loi Godfrain (1988)</strong>
+        <p style="font-size:0.875rem;">Première loi française à réprimer le piratage informatique. Elle pénalise l'accès frauduleux à un système de traitement automatisé de données et reste la base de la répression des cyberattaques.</p>
+      </div>
+      <div>
+        <strong style="color:white;display:block;margin-bottom:0.3rem;">Loi République Numérique — Loi Lemaire (2016)</strong>
+        <p style="font-size:0.875rem;">Avancée majeure pour les hackers éthiques : elle leur permet de signaler des failles à l'ANSSI sans risquer de poursuites pénales, à condition d'agir de bonne foi et de ne pas divulguer la faille publiquement avant son signalement officiel.</p>
+      </div>
+      <div>
+        <strong style="color:white;display:block;margin-bottom:0.3rem;">Le contrat : protection indispensable</strong>
+        <p style="font-size:0.875rem;">Tout pentest doit être précédé d'un accord écrit entre l'entreprise et le pentester, définissant le périmètre d'action, les systèmes testés et les limites de la mission. Sans ce mandat explicite, l'intervention est illégale, même bien intentionnée.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>L'ANSSI joue un rôle central dans ce dispositif via le CERT-FR. Elle délivre également le label <strong style="color:white;">ExpertCyber</strong> pour identifier les prestataires de confiance en cybersécurité.</p>
+
+  <div class="divider"></div>
+
+  <h4>Conclusion</h4>
+  <p>Le hacking éthique est aujourd'hui une réponse concrète et efficace aux cybermenaces qui pèsent sur les entreprises. En retournant les techniques des hackers malveillants à leur avantage, les organisations peuvent identifier leurs failles avant qu'elles ne soient exploitées. En France, une entreprise sur deux a été victime d'une cyberattaque en 2024, ce qui illustre l'urgence de ces démarches. Loin d'être une pratique marginale, le hacking éthique s'impose comme un pilier de toute stratégie de cybersécurité sérieuse.</p>
+
+  <div class="divider"></div>
+
+  <h4>Articles de référence</h4>
+  <div class="articles-grid">
+    <div class="article-card">
+      <img src="images/cybermalveillance.jpg" alt="Cybermalveillance">
+      <div class="article-card-body">
+        <div class="article-source">Cybermalveillance.gouv.fr</div>
+        <div class="article-date">06/10/2025</div>
+        <p>Baromètre national de la maturité cyber des TPE-PME.</p>
+        <a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/etude-maturite-cyber-tpe-pme-2025" class="btn-primary" target="_blank">En savoir plus →</a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="images/attaque-ministere.jpg" alt="Cyberattaque ministère">
+      <div class="article-card-body">
+        <div class="article-source">IT-Connect.fr</div>
+        <div class="article-date">17/12/2025</div>
+        <p>Cyberattaque du ministère de l'Intérieur : les pirates ont eu accès à des fichiers importants.</p>
+        <a href="https://www.it-connect.fr/cyberattaque-ministere-de-linterieur-les-pirates-ont-bien-eu-acces-a-des-fichiers-importants/" class="btn-primary" target="_blank">En savoir plus →</a>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="images/types_piratage.jpg" alt="Types de piratage">
+      <div class="article-card-body">
+        <div class="article-source">Info.Gouv.fr</div>
+        <div class="article-date">09/10/2025</div>
+        <p>Quelles sont les principales méthodes de piratage en entreprise ?</p>
+        <a href="https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/assurer-sa-cybersecurite-et-la-protection-de-ses-3" class="btn-primary" target="_blank">En savoir plus →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-tag">Veille n°2 — Environnement</div>
+  <h2>Green Computing</h2>
+
+  <div class="problematique-box">💡 Problématique : Comment les entreprises peuvent-elles concilier performance informatique, innovation technologique et réduction de leur impact environnemental ?</div>
+
+  <p style="margin-bottom:1.5rem;">La transformation numérique est incontournable. Mais cette évolution rapide entraîne une augmentation significative de la consommation énergétique et soulève des questions environnementales importantes.</p>
+
+  <div class="glass-card" style="margin-bottom:1rem;"><h3 style="color:var(--accent);margin-bottom:0.75rem;">🏭 Enjeux environnementaux</h3><p>Les serveurs et data centers consomment de grandes quantités d'électricité et nécessitent des systèmes de refroidissement performants. Le renouvellement fréquent du matériel génère aussi d'importants déchets électroniques.</p></div>
+  <div class="glass-card" style="margin-bottom:1rem;"><h3 style="color:var(--accent);margin-bottom:0.75rem;">🌱 Le Green Computing</h3><p>Le Green Computing vise à réduire l'impact environnemental tout en maintenant les performances. Virtualisation des serveurs, optimisation des infrastructures, gestion intelligente des ressources : autant de pratiques conciliant efficacité et démarche responsable.</p></div>
+  <div class="glass-card" style="margin-bottom:1rem;"><h3 style="color:var(--accent);margin-bottom:0.75rem;">☁️ Le rôle du cloud</h3><p>Le cloud computing peut jouer un rôle positif en mutualisant les ressources. Cependant, une utilisation mal maîtrisée peut entraîner une surconsommation. L'IA représente également un levier important pour améliorer l'efficacité énergétique.</p></div>
+  <div class="glass-card" style="margin-bottom:1rem;"><h3 style="color:var(--accent);margin-bottom:0.75rem;">✅ Conclusion</h3><p>Le Green Computing s'impose comme un enjeu stratégique. Les professionnels de l'informatique ont un rôle clé à jouer en intégrant ces préoccupations dans leurs choix techniques, pour contribuer à une informatique plus responsable.</p></div>
+
+  <div class="divider"></div>
+
+  <div class="section-tag">Méthodes</div>
+  <h2>Mes outils de veille</h2>
+  <p>Je me tiens informé sur l'actualité cyber via plusieurs sources complémentaires :</p>
+
+  <div class="tools-grid">
+    <a href="https://feedly.com/i/collection/content/user/9d64b3f3-28ed-414f-9ce8-062e4d2ae23d/category/b779cb14-f35b-405e-a46a-b20e14cf9246" target="_blank" class="tool-link">
+      <img src="images/feedly_logo.png" alt="Feedly"><span>Feedly</span>
+    </a>
+    <div class="tool-link">
+      <img src="images/Youtube_logo.png" alt="YouTube"><span>YouTube</span>
+    </div>
+    <a href="https://www.cert.ssi.gouv.fr/" target="_blank" class="tool-link">
+      <img src="images/logo_cert_fr.svg" alt="CERT-FR"><span>CERT-FR</span>
+    </a>
+  </div>
+
+  <div class="glass-card" style="margin-top:1rem;">
+    <h3 style="color:white;margin-bottom:0.75rem;">📺 Chaînes YouTube recommandées</h3>
+    <p>Je suis plusieurs chaînes YouTube spécialisées en cybersécurité :</p>
+    <ul style="margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
+      <li style="color:rgba(255,255,255,0.75);padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent)">→</span><strong style="color:white;">Cybernews</strong> — vidéos quotidiennes sur les dernières attaques et tendances</li>
+      <li style="color:rgba(255,255,255,0.75);padding-left:1.2rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent)">→</span><strong style="color:white;">Micode</strong> et <strong style="color:white;">Hackintux</strong> — vulgarisation de sujets techniques</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <h3>Mes coordonnées</h3>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <strong>Follow me</strong>
+      <div class="footer-logos">
+        <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/KillBill-jpg" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <strong>Email</strong>
+      <a href="mailto:rayanbennaceur.pro@gmail.com">rayanbennaceur.pro@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <strong>Téléphone</strong>
+      <p>06 95 72 29 19</p>
+    </div>
+  </div>
+  <p class="footer-copy">Copyright 2025 © Rayan BENNACEUR</p>
+</footer>

@@ -1,109 +1,273 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style_contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Rayan BENNACEUR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 3rem;
+      align-items: start;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info > p {
+      margin-bottom: 2rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      transition: var(--transition);
+      color: white;
+    }
+
+    .contact-link:hover {
+      background: rgba(255,255,255,0.13);
+      border-color: rgba(255,255,255,0.25);
+      color: white;
+      transform: translateX(4px);
+    }
+
+    .contact-link-icon {
+      font-size: 1.3rem;
+      width: 40px;
+      text-align: center;
+    }
+
+    .contact-link-body strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-link-body span {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Form */
+    .contact-form-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    }
+
+    .contact-form-card h3 {
+      font-size: 1.3rem;
+      color: #1a1a2e;
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-form-card .subtitle {
+      font-size: 0.875rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #222;
+      transition: border-color 0.2s;
+      outline: none;
+      background: #fafafa;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #c33764;
+      background: white;
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 130px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 0.9rem;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 0.5rem;
+    }
+
+    .form-submit:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(195,55,100,0.4);
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+<body>
 
 <header>
-<h1>Rayan BENNACEUR</h1>
-    <p>_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Accueil</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="a_propos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                À propos
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="a_propos.html#a_propos">À propos de moi</a></li>
-                <li><a class="dropdown-item" href="a_propos.html#bts">BTS SIO</a></li>
-                <li><a class="dropdown-item" href="a_propos.html#certif">Mes certifications</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projets.html">Mes projets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="veille_tech.html">Veille technologique</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Rayan <span>BENNACEUR</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-dropdown">
+        <a href="a_propos.html">À propos ▾</a>
+        <div class="dropdown-menu">
+          <div class="dropdown-menu-inner">
+            <a href="a_propos.html#a_propos">À propos de moi</a>
+            <a href="a_propos.html#bts">BTS SIO</a>
+            <a href="a_propos.html#certif">Mes certifications</a>
+          </div>
         </div>
       </div>
+      <a href="projets.html">Mes projets</a>
+      <a href="veille_tech.html">Veille technologique</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </div>
 </header>
-<body>
-  <center>
-    <div class="contact-card">
-        <h2>Contactez-moi 📩</h2>
-        <p class="subtitle">Une question ou juste envie de dire bonjour ?</p>
 
-        <form>
-            <div class="form-group">
-                <label for="name">Nom et prénom</label>
-                <input type="text" id="name" placeholder="Votre nom">
-            </div>
+<div class="page-content">
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="votre@email.com">
-            </div>
+  <div style="text-align:center; margin-bottom:3.5rem;">
+    <div class="section-tag" style="display:inline-block;">Me contacter</div>
+    <h2 style="margin-top:0.75rem;">Parlons-nous !</h2>
+    <p style="max-width:500px; margin:0 auto; color:rgba(255,255,255,0.65);">Une question, une opportunité ou juste envie de dire bonjour ?</p>
+  </div>
 
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Écrivez votre message ici..."></textarea>
-            </div>
+  <div class="contact-layout">
+    <div class="contact-info">
+      <div class="section-tag">Coordonnées</div>
+      <h2 style="font-size:1.6rem; margin-top:0.5rem;">Restons en contact</h2>
+      <p>N'hésitez pas à me contacter via le formulaire ou directement par :</p>
 
-            <button type="submit">Envoyer ✨</button>
-        </form>
+      <a href="mailto:rayanbennaceur.pro@gmail.com" class="contact-link">
+        <span class="contact-link-icon">📨</span>
+        <div class="contact-link-body">
+          <strong>Email</strong>
+          <span>rayanbennaceur.pro@gmail.com</span>
+        </div>
+      </a>
+
+      <div class="contact-link" style="cursor:default;">
+        <span class="contact-link-icon">📞</span>
+        <div class="contact-link-body">
+          <strong>Téléphone</strong>
+          <span>06 95 72 29 19</span>
+        </div>
+      </div>
+
+      <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank" class="contact-link">
+        <span class="contact-link-icon">💼</span>
+        <div class="contact-link-body">
+          <strong>LinkedIn</strong>
+          <span>Rayan BENNACEUR</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/KillBill-jpg" target="_blank" class="contact-link">
+        <span class="contact-link-icon">💻</span>
+        <div class="contact-link-body">
+          <strong>GitHub</strong>
+          <span>KillBill-jpg</span>
+        </div>
+      </a>
     </div>
-  </center>
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+
+    <div class="contact-form-card">
+      <h3>Envoyer un message</h3>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Nom et prénom</label>
+          <input type="text" id="name" placeholder="Votre nom complet" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Adresse email</label>
+          <input type="email" id="email" placeholder="votre@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <input type="text" id="sujet" placeholder="Ex : Opportunité d'alternance 😊">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Écrivez votre message ici..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Envoyer le message ✨</button>
+      </form>
+    </div>
+  </div>
+
+</div>
 
 <footer>
-    <div class="bloc-footer1">
-        <h3>Mes coordonnées</h3>
-        <div class="bloc-footer2">
-            <div class="follow">
-                <p><strong>Follow me</strong></p>
-                <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank"><img src="images/linkedin.png" width="40" height="40" class="logo-footer"></a>
-                <a href="https://github.com/KillBill-jpg"  target="_blank"><img src="images/github.png" width="40" height="40" class="logo-footer"></a>
-            </div>
-            <div class="mail">
-                <p><strong>Email</strong></p>
-                <br>
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDxqWLWhClMBLCxXZgSwKQQSHLmZZsZzLWNKQWCqTnQdGSWtmxgSKNdFwxmxRRGPnGHjCq" target="_blank">rayanbennaceur.pro@gmail.com</a>
-            </div>
-            <div class="call">
-                <p><strong>Call me</strong></p>
-                <br><p>06 95 72 29 19</p>
-            </div>
-        </div>  
-        <br>  
-        <p>Copyright 2025 © Rayan BENNACEUR</p>
+  <h3>Mes coordonnées</h3>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <strong>Follow me</strong>
+      <div class="footer-logos">
+        <a href="https://www.linkedin.com/in/rayan-bennaceur-95729b289" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/KillBill-jpg" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      </div>
     </div>
+    <div class="footer-col">
+      <strong>Email</strong>
+      <a href="mailto:rayanbennaceur.pro@gmail.com">rayanbennaceur.pro@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <strong>Téléphone</strong>
+      <p>06 95 72 29 19</p>
+    </div>
+  </div>
+  <p class="footer-copy">Copyright 2025 © Rayan BENNACEUR</p>
 </footer>
-
-</html>
