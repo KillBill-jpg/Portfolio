@@ -161,6 +161,30 @@
   </style>
 </head>
 <body>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+  (function(){
+    emailjs.init("BV8Sc8E8YeWQ6LWwL");
+  })();
+
+   
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+   
+
+    emailjs.sendForm("service_qwx4xoh", "template_nnhjtaq", this)
+      .then(function() {
+        alert("Message envoyé !");
+      }, function(error) {
+        alert("Erreur : " + error.text);
+      });
+  });
+</script>
+</body>
 
 <header>
   <div class="nav-inner">
